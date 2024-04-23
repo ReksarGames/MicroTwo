@@ -1,6 +1,6 @@
-package com.example.microone;
+package com.example.microone.controllers;
 
-import com.example.microone.model.Message;
+import com.example.microone.dto.MessageDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -15,7 +15,7 @@ class MessageController {
     }
 
     @PostMapping("/receive")
-    public ResponseEntity<Message> receiveMessage(@RequestBody Message responseMessage) {
+    public ResponseEntity<MessageDTO> receiveMessage(@RequestBody MessageDTO responseMessage) {
         return ResponseEntity.ok(responseMessage);
     }
 
